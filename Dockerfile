@@ -15,7 +15,7 @@ RUN echo "/usr/local/bin/ngrok tcp 22 &>/dev/null &" >> /kaal.sh
 RUN mkdir /run/sshd
 RUN echo 'PermitRootLogin yes' >>  /etc/ssh/sshd_config 
 RUN echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-RUN echo root:kaal | chpasswd
+RUN echo root:kaalt | chpasswd
 RUN service ssh start
 
 RUN chmod 755 /kaal.sh
